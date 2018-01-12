@@ -1,3 +1,5 @@
+replace terms and headings in a Common Form with numeric indices
+
 ```javascript
 var assert = require('assert')
 var index = require('commonform-index-names')
