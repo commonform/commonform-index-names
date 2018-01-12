@@ -6,9 +6,11 @@
   "repository": "commonform/commonform-index-names",
   "license": "Apache-2.0",
   "scripts": {
-    "test": "node test.js"
+    "test": "defence -i javascript README.md | replace-require-self | node"
   },
   "devDependencies": {
+    "defence-cli": "^2.0.1",
+    "replace-require-self": "^1.1.1",
     "tape": "^4.8.0"
   }
 }
