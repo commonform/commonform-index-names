@@ -6,7 +6,7 @@ var index = require('commonform-index-names')
 
 assert.deepStrictEqual(
   index({content: [{definition: 'Agreement'}]}),
-  {content: [{definition: 0}]}
+  {content: [{definition: '0'}]}
 )
 
 assert.deepStrictEqual(
@@ -20,10 +20,10 @@ assert.deepStrictEqual(
   }),
   {
     content: [
-      {definition: 0},
-      {definition: 1},
-      {form: {content: [{use: 0}]}},
-      {form: {content: [{use: 1}]}}
+      {definition: '0'},
+      {definition: '1'},
+      {form: {content: [{use: '0'}]}},
+      {form: {content: [{use: '1'}]}}
     ]
   }
 )
@@ -41,10 +41,10 @@ assert.deepStrictEqual(
   {
     content: [
       {
-        heading: 0,
+        heading: '0',
         form: {content: ['some text']}
       },
-      {form: {content: [{reference: 0}]}}
+      {form: {content: [{reference: '0'}]}}
     ]
   }
 )
@@ -69,17 +69,17 @@ assert.deepStrictEqual(
   {
     content: [
       {
-        heading: 0,
+        heading: '0',
         form: {
           content: [
             {
-              heading: 1,
+              heading: '1',
               form: {content: ['some text']}
             }
           ]
         }
       },
-      {form: {content: [{reference: 1}]}}
+      {form: {content: [{reference: '1'}]}}
     ]
   }
 )

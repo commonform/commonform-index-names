@@ -16,7 +16,7 @@ function recurse (form, terms, headings) {
         terms.push(term)
         index = terms.length - 1
       }
-      return {definition: index}
+      return {definition: index.toString()}
     } else if (element.hasOwnProperty('use')) {
       term = element.use
       index = terms.indexOf(term)
@@ -24,7 +24,7 @@ function recurse (form, terms, headings) {
         terms.push(term)
         index = terms.length - 1
       }
-      return {use: index}
+      return {use: index.toString()}
     } else if (element.hasOwnProperty('form')) {
       if (element.hasOwnProperty('heading')) {
         heading = element.heading
@@ -34,7 +34,7 @@ function recurse (form, terms, headings) {
           index = headings.length - 1
         }
         return {
-          heading: index,
+          heading: index.toString(),
           form: recurse(element.form, terms, headings)
         }
       } else {
@@ -49,7 +49,7 @@ function recurse (form, terms, headings) {
         headings.push(heading)
         index = headings.length - 1
       }
-      return {reference: index}
+      return {reference: index.toString()}
     } else {
       return element
     }
