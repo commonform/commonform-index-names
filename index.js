@@ -25,6 +25,20 @@ function recurse (form, terms, headings) {
         index = terms.length - 1
       }
       return {use: index.toString()}
+    } else if (element.hasOwnProperty('repository')) {
+      if (element.hasOwnProperty('heading')) {
+        heading = element.heading
+        index = headings.indexOf(heading)
+        if (index === -1) {
+          headings.push(heading)
+          index = headings.length - 1
+        }
+        var replacement = clone(element)
+        replacement.heading = index.toString()
+        return replacement
+      } else {
+        return element
+      }
     } else if (element.hasOwnProperty('form')) {
       if (element.hasOwnProperty('heading')) {
         heading = element.heading
@@ -55,4 +69,8 @@ function recurse (form, terms, headings) {
     }
   })
   return returned
+}
+
+function clone (argument) {
+  return JSON.parse(JSON.stringify(argument))
 }

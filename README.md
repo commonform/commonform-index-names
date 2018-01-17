@@ -54,6 +54,35 @@ assert.deepStrictEqual(
     content: [
       {
         heading: 'A',
+        repository: 'api.commonform.org',
+        publisher: 'kemitchell',
+        project: 'some-component',
+        edition: '1e',
+        substitutions: {terms: {}, headings: {}}
+      },
+      {form: {content: [{reference: 'A'}]}}
+    ]
+  }),
+  {
+    content: [
+      {
+        heading: '0',
+        repository: 'api.commonform.org',
+        publisher: 'kemitchell',
+        project: 'some-component',
+        edition: '1e',
+        substitutions: {terms: {}, headings: {}}
+      },
+      {form: {content: [{reference: '0'}]}}
+    ]
+  }
+)
+
+assert.deepStrictEqual(
+  index({
+    content: [
+      {
+        heading: 'A',
         form: {
           content: [
             {
