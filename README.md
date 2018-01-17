@@ -4,12 +4,12 @@ replace terms and headings in a Common Form with numeric indices
 var assert = require('assert')
 var index = require('commonform-index-names')
 
-assert.deepEqual(
+assert.deepStrictEqual(
   index({content: [{definition: 'Agreement'}]}),
   {content: [{definition: 0}]}
 )
 
-assert.deepEqual(
+assert.deepStrictEqual(
   index({
     content: [
       {definition: 'Agreement'},
@@ -28,7 +28,7 @@ assert.deepEqual(
   }
 )
 
-assert.deepEqual(
+assert.deepStrictEqual(
   index({
     content: [
       {
@@ -49,7 +49,7 @@ assert.deepEqual(
   }
 )
 
-assert.deepEqual(
+assert.deepStrictEqual(
   index({
     content: [
       {
